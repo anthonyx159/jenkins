@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+    environment {
+        INSTAGRAM_ANTHONY="@anthony"
+    }
+    stages {
+        stage("saludo 1") {
+            steps {
+                echo "Hola desde saludo 1"
+            }
+        }
+        stage("saludo 2") {
+            steps {
+                echo "Hola desde saludo 2, paso 1"
+                echo "Hola desde saludo 2, paso 2"
+            }
+        }
+        stage("Imprimir variables de entorno") {
+            steps {
+                echo "${env.INSTAGRAM_ANTHONY}"
+                echo "${INSTAGRAM_ANTHONY}"
+                echo "$INSTAGRAM_ANTHONY"
+                echo "$TEST"
+                
+                sh "echo 'Hola mundo'"
+                sh "echo ${env.TEST}"
+                sh "echo ${TEST}"
+                sh "echo $TEST"
+                sh """echo $TEST"""
+            }
+        }
+    }
+}
