@@ -29,5 +29,11 @@ pipeline {
                 sh """echo $TEST"""
             }
         }
+        stage("saludo 3") {
+            steps {
+                echo "Hola desde saludo 3"
+                echo "Hola desde saludo 3"
+            }
+        }
     }
 }
