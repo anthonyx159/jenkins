@@ -47,5 +47,11 @@ pipeline {
                 echo "Hola desde saludo 5"
             }
         }
+        stage("saludo 6") {
+            steps {
+                echo "Hola desde saludo 6"
+                echo "Hola desde saludo 6"
+            }
+        }
     }
 }
